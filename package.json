@@ -7,6 +7,8 @@
     ]
   },
   "devDependencies": {
+    "@redwoodjs/auth-dbauth-setup": "6.2.1",
+    "@redwoodjs/cli-storybook": "6.2.1",
     "@redwoodjs/core": "6.2.1"
   },
   "eslintConfig": {
@@ -20,5 +22,13 @@
   "prisma": {
     "seed": "yarn rw exec seed"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.3",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.9",
+    "@mui/styles": "^5.14.9",
+    "@storybook/react": "^7.4.1"
+  }
 }
