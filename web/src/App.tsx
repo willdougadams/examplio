@@ -1,4 +1,3 @@
-import { CssBaseline } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
@@ -10,15 +9,18 @@ import Routes from 'src/Routes'
 import './scaffold.css'
 import { AuthProvider, useAuth } from './auth'
 
-import './index.css'
-
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
+  typography: {
+    // dont forget to add the font to index.html
+    fontFamily: 'Roboto, Mooli',
+  },
 })
 
 const lightTheme = createTheme({
+  ...darkTheme,
   palette: {
     mode: 'light',
   },
@@ -53,7 +55,6 @@ const App = () => {
               }}
             >
               <ThemeProvider theme={dark ? darkTheme : lightTheme}>
-                <CssBaseline />
                 <Routes />
               </ThemeProvider>
             </AppContext.Provider>

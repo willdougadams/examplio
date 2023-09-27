@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import AdminPage from './AdminPage'
+import ContactPage from './ContactPage'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //   https://redwoodjs.com/docs/testing#testing-pages-layouts
 
-describe('AdminPage', () => {
+describe('ContactPage', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<AdminPage />)
+      render(<ContactPage />)
     }).not.toThrow()
   })
 })

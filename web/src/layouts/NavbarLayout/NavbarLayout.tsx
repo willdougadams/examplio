@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { AdminPanelSettings, Home } from '@mui/icons-material'
+import { Home } from '@mui/icons-material'
+import CampaignIcon from '@mui/icons-material/Campaign'
 import { Drawer, Box, Divider, CssBaseline, List } from '@mui/material'
 
 import { routes } from '@redwoodjs/router'
@@ -35,9 +36,9 @@ const NavbarLayout = ({ children }: NavbarLayoutProps) => {
         <List>
           <NavButton to={routes.home()} icon={<Home />} label="Home" />
           <NavButton
-            to={routes.admin()}
-            icon={<AdminPanelSettings />}
-            label="Admin"
+            to={routes.contact()}
+            icon={<CampaignIcon />}
+            label="Contact"
           />
         </List>
       </Drawer>

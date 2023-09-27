@@ -21,7 +21,7 @@ const HomePage = () => {
       <Typography variant="h4">Welcome to Examplio</Typography>
       <Typography variant="h6" sx={{ marginLeft: '16px' }}>
         The industry-leading B2B SaaS platform for fizzing your widgets and
-        buzzing you wuzzits
+        buzzing your wuzzits
       </Typography>
       <Divider sx={{ marginBottom: '32px' }} />
       <Typography variant="h5">What can Examplio do for you?</Typography>
@@ -30,19 +30,19 @@ const HomePage = () => {
           <ListItemIcon>
             <Lightbulb />
           </ListItemIcon>
-          <ListItemText primary="Optimize Productivity" />
+          <ListItemText primary="Optimize Streamlining" />
         </ListItem>
         <ListItem>
           <ListItemIcon>
             <EnergySavingsLeafIcon />
           </ListItemIcon>
-          <ListItemText primary="Synergize Growth" />
+          <ListItemText primary="Synergize Collaborations" />
         </ListItem>
         <ListItem>
           <ListItemIcon>
             <MoodIcon />
           </ListItemIcon>
-          <ListItemText primary="Eternal Joy" />
+          <ListItemText primary="User-Friendly Ergonomics" />
         </ListItem>
         <ListItem>
           <ListItemIcon>

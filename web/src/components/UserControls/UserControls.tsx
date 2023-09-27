@@ -1,4 +1,4 @@
-import { Logout, Person } from '@mui/icons-material'
+import { Logout, Person, Settings } from '@mui/icons-material'
 import {
   List,
   ListItem,
@@ -7,6 +7,8 @@ import {
   Menu,
   MenuItem,
 } from '@mui/material'
+
+import { navigate, routes } from '@redwoodjs/router'
 
 import { useAuth } from 'src/auth'
 
@@ -40,7 +42,7 @@ const UserControls = () => {
           <ListItemIcon>
             <Person />
           </ListItemIcon>
-          {currentUser.email}
+          {currentUser.name.split(' ')[0]}
         </ListItemButton>
         <Menu
           id="user-menu"
@@ -53,6 +55,10 @@ const UserControls = () => {
         >
           <MenuItem>
             <ThemeToggle />
+          </MenuItem>
+          <MenuItem onClick={() => navigate(routes.settings())}>
+            <Settings />
+            Settings
           </MenuItem>
           <MenuItem onClick={logOut}>
             <Logout />
