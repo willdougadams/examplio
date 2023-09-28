@@ -15,6 +15,7 @@ import NavbarLayout from './layouts/NavbarLayout/NavbarLayout'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
+      <Route path="/patient" page={PatientPage} name="patient" />
       <Route path="/contact" page={ContactPage} name="contact" />
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />
@@ -26,6 +27,7 @@ const Routes = () => {
         </Private>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/contact" page={ContactPage} name="contact" />
+        <Route path="/patient" page={PatientPage} name="patient" />
         <Route notfound page={NotFoundPage} />
       </Set>
     </Router>

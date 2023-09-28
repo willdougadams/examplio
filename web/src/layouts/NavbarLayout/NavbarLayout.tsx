@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Home } from '@mui/icons-material'
 import CampaignIcon from '@mui/icons-material/Campaign'
+import MonitorHeartIcon from '@mui/icons-material/MonitorHeart'
 import { Drawer, Box, Divider, CssBaseline, List } from '@mui/material'
 
 import { routes } from '@redwoodjs/router'
@@ -39,6 +40,11 @@ const NavbarLayout = ({ children }: NavbarLayoutProps) => {
             to={routes.contact()}
             icon={<CampaignIcon />}
             label="Contact"
+          />
+          <NavButton
+            to={routes.patient()}
+            icon={<MonitorHeartIcon />}
+            label="Patient"
           />
         </List>
       </Drawer>
