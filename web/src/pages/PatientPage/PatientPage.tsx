@@ -12,7 +12,7 @@ import { MetaTags } from '@redwoodjs/web'
 import DemographicsTab from 'src/components/DemographicsTab/DemographicsTab'
 import PatientPageHeader from 'src/components/PatientPageHeader/PatientPageHeader'
 
-export const mockUrl = 'https://6398d8e229930e2bb3c3b149.mockapi.io'
+export const mockUrl = 'https://bunkum.mockapi.io'
 
 export interface Patient {
   createdAt: string
@@ -101,7 +101,14 @@ const PatientPage = () => {
   }, [])
 
   if (!patient) {
-    return <LinearProgress />
+    return (
+      <>
+        <Typography variant="h6">
+          API DEPRECATED, THIS PAGE WILL NOT LOAD ANY DATA
+        </Typography>
+        <LinearProgress />
+      </>
+    )
   }
 
   return (
@@ -115,6 +122,9 @@ const PatientPage = () => {
           phone={patient.phone}
           avitarUrl={patient.avatar}
         />
+        <Typography variant="h6">
+          API DEPRECATED, THIS PAGE WILL NOT LOAD ANY DATA
+        </Typography>
         <Tabs value={value} onChange={handleChange}>
           <Tab
             label="Demographics"
