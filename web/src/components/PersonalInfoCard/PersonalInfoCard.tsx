@@ -17,7 +17,7 @@ interface PersonalInfoCardProps {
 
 const PersonalInfoCard = ({ patient }: PersonalInfoCardProps) => {
   const [editMode, setEditMode] = React.useState(false)
-  const [editedPatient, setEditedPatient] = React.useState(patient)
+  const [editedPatient, setEditedPatient] = React.useState<Patient>(patient)
 
   const handleUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEditedPatient({
@@ -28,8 +28,6 @@ const PersonalInfoCard = ({ patient }: PersonalInfoCardProps) => {
 
   const handleEditToggle = () => {
     if (editMode) {
-      // do actual saving here
-      console.log(`saving updates: ${JSON.stringify(editedPatient)}`)
       fetch(`${mockUrl}/Patients/${patient.id}`, {
         method: 'PUT',
         body: JSON.stringify(editedPatient),
