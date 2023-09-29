@@ -48,7 +48,7 @@ const HomePage = () => {
           <ListItemIcon>
             <BlenderIcon />
           </ListItemIcon>
-          <ListItemText primary="Killer Margaritas" />
+          <ListItemText primary="Wheatgrass Smoothie" />
         </ListItem>
       </List>
     </Box>

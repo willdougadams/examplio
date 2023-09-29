@@ -1,9 +1,12 @@
+import { useEffect } from 'react'
+
 import { Logout, Person, Settings } from '@mui/icons-material'
 import {
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
+  ListItemText,
   Menu,
   MenuItem,
 } from '@mui/material'
@@ -15,6 +18,7 @@ import { useAuth } from 'src/auth'
 import LoginButton from '../LoginButton/LoginButton'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
 const UserControls = () => {
+  const [displayName, setDisplayName] = React.useState<string>('')
   const { isAuthenticated, logOut, currentUser } = useAuth()
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -25,6 +29,18 @@ const UserControls = () => {
   const handleClose = () => {
     setAnchorEl(null)
   }
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      handleClose()
+    }
+  }, [isAuthenticated])
+
+  useEffect(() => {
+    if (currentUser) {
+      setDisplayName(currentUser.name)
+    }
+  }, [currentUser, isAuthenticated])
 
   if (!isAuthenticated) {
     return <LoginButton />
@@ -42,7 +58,7 @@ const UserControls = () => {
           <ListItemIcon>
             <Person />
           </ListItemIcon>
-          {currentUser.name.split(' ')[0]}
+          <ListItemText primary={displayName} />
         </ListItemButton>
         <Menu
           id="user-menu"
