@@ -51,18 +51,30 @@ const ContactPage = () => {
     <Box>
       <MetaTags title="Contact" description="Contact page" />
 
-      <Typography variant="h3">Contact</Typography>
-      <Typography variant="body1">
-        Thank you for using Examplio! We are always looking for ways to improve
-        our service. Contact us using the form below!
+      <Typography variant="h3" textAlign={'center'}>
+        Contact
       </Typography>
+      <Box display={'flex'} justifyContent={'center'}>
+        <Typography variant="body1">Thank you for using</Typography>
+        <Typography variant="body1" width="0.25rem" />
+        <Typography variant="body1" sx={{ fontFamily: 'Itim' }}>
+          Examplio
+        </Typography>
+        <Typography variant="body1">
+          ! We are always looking for ways to improve our service. Contact us
+          using the form below!
+        </Typography>
+      </Box>
+
       <Toaster />
       <Divider />
       <br />
       <Form
         onSubmit={onSubmit}
         config={{ mode: 'onBlur' }}
-        style={{ display: 'block', verticalAlign: 'top' }}
+        style={{
+          display: 'block',
+        }}
       >
         <Label name="name" errorClassName="error">
           Name

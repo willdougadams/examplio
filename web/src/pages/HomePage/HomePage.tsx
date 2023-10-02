@@ -1,21 +1,9 @@
-import { Lightbulb } from '@mui/icons-material'
-import BlenderIcon from '@mui/icons-material/Blender'
-import ContentCutIcon from '@mui/icons-material/ContentCut'
-import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf'
-import MoodIcon from '@mui/icons-material/Mood'
-import {
-  Box,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from '@mui/material'
+import { Box, Divider, Typography } from '@mui/material'
 
 import { MetaTags } from '@redwoodjs/web'
 
 import Flashcard from 'src/components/FlashCard/FlashCard'
+import WaveFooter from 'src/components/WaveFooter/WaveFooter'
 
 import {
   ErgonomicBack,
@@ -65,6 +53,7 @@ const HomePage = () => {
         <Flashcard front={<ErgonomicFront />} back={<ErgonomicBack />} />
         <Flashcard front={<WheatgrassFront />} back={<WheatgrassBack />} />
       </Box>
+      <WaveFooter />
     </Box>
   )
 }

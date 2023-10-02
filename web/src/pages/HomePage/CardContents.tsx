@@ -103,7 +103,7 @@ export const ErgonomicFront = () => {
 export const ErgonomicBack = () => {
   return (
     <BackContent
-      text="Reduce eye sweat and carpe diem tunnel with our patented user-friendly ergonomic interface"
+      text="Reduce eye sprain and carpe diem tunnel with our patented user-friendly ergonomic interface"
       icon={<AssistWalkerIcon sx={{ fontSize: '64px' }} />}
     />
   )
