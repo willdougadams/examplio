@@ -1,10 +1,4 @@
-import { useEffect } from 'react'
-
 import { Box, Tabs, Tab } from '@mui/material'
-
-import { navigate, routes } from '@redwoodjs/router'
-
-import { useAuth } from 'src/auth'
 
 import SignIn from '../SignIn/SignIn'
 import SignUp from '../SignUp/SignUp'

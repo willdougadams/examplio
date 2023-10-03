@@ -17,6 +17,10 @@ const LoginButton = () => {
     setAnchorEl(anchorEl ? null : event.currentTarget)
   }
 
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
   const open = Boolean(anchorEl)
   const id = open ? 'simple-popper' : undefined
 
@@ -38,6 +42,7 @@ const LoginButton = () => {
           vertical: 'bottom',
           horizontal: 'left',
         }}
+        onClose={handleClose}
       >
         <Paper sx={{ p: 2 }}>
           <LoginSignupPopover />

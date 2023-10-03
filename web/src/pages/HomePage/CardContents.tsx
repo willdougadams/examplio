@@ -16,15 +16,23 @@ const commonStyles = {
 interface FrontContentProps {
   text: string
   bgImage: string
+  bgPosition?: string
+  bgSize?: string
 }
 
-const FrontContent = ({ text, bgImage }: FrontContentProps) => {
+const FrontContent = ({
+  text,
+  bgImage,
+  bgPosition,
+  bgSize,
+}: FrontContentProps) => {
   return (
     <Box
       style={{
         ...commonStyles,
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: 'cover',
+        backgroundSize: bgSize || 'cover',
+        backgroundPosition: bgPosition || 'center',
         color: '#000',
       }}
     >
@@ -59,6 +67,7 @@ export const StreamlineFront = () => {
     <FrontContent
       text="Optimize Streamlining"
       bgImage="https://cdn.pixabay.com/photo/2019/06/06/16/02/technology-4256272_1280.jpg"
+      bgPosition="right -20px top"
     />
   )
 }
@@ -75,8 +84,10 @@ export const StreamlineBack = () => {
 export const SynergyFront = () => {
   return (
     <FrontContent
-      text="Synergize Collaborations"
+      text="Synergize Collaboration"
       bgImage="https://cdn.pixabay.com/photo/2023/07/18/16/25/rowing-8135184_1280.jpg"
+      bgPosition="top right -40px"
+      bgSize="200%"
     />
   )
 }
@@ -95,7 +106,9 @@ export const ErgonomicFront = () => {
   return (
     <FrontContent
       text="User-Friendly Ergonomics"
-      bgImage="https://media.istockphoto.com/id/1348229084/photo/shoulder-pain-and-posture-man-suffering.jpg?s=1024x1024&w=is&k=20&c=2kKyB4CS2Y_nsB9s9E8-a2ZY4nI2_qqpzJsciFPZz08="
+      bgImage="https://www.shutterstock.com/shutterstock/photos/1084534856/display_1500/stock-photo-businesswoman-relax-from-work-at-the-office-1084534856.jpg"
+      bgPosition="top"
+      bgSize="150%"
     />
   )
 }
@@ -114,6 +127,8 @@ export const WheatgrassFront = () => {
     <FrontContent
       text="Wheatgrass Smoothie"
       bgImage="https://cdn.pixabay.com/photo/2015/03/20/17/49/green-682620_1280.jpg"
+      bgPosition="top left -35px"
+      bgSize="150%"
     />
   )
 }

@@ -29,9 +29,9 @@ const HomePage = () => {
           Examplio
         </Typography>
       </Box>
-      <Typography variant="h4" textAlign="center">
-        The industry-leading B2B SaaS platform for fizzing your widgets and
-        buzzing your wuzzits
+      <Typography variant="h4" textAlign="center" marginX="15%">
+        The example cloud platform for very serious professionals fizzing
+        widgets and buzzing wuzzos at the speed of light!
       </Typography>
       <Divider sx={{ marginY: '32px' }} />
       <Box display={'flex'} justifyContent={'center'}>

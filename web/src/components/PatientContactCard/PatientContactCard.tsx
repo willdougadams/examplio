@@ -13,6 +13,7 @@ const PatientContactCard = ({ patient }: PatientContactCardProps) => {
         title="Personal Information"
         subheader="This is the contact information for the patient"
       />
+      <p>{JSON.stringify(patient)}</p>
     </Card>
   )
 }

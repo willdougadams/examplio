@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
 
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'
 import ContactPageIcon from '@mui/icons-material/ContactPage'
 import MedicationIcon from '@mui/icons-material/Medication'
 import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle'
 import { Box, Tabs, Tab, Typography, LinearProgress } from '@mui/material'
 
 import { useParams } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
 
 import DemographicsTab from 'src/components/DemographicsTab/DemographicsTab'
 import PatientPageHeader from 'src/components/PatientPageHeader/PatientPageHeader'
@@ -65,7 +63,7 @@ function calculateAge(dateString: string): number {
   return age
 }
 
-function CustomTabPanel(props: TabPanelProps) {
+function CustomTabPanel(props) {
   const { children, value, index, ...other } = props
 
   return (
@@ -98,7 +96,7 @@ const PatientPage = () => {
       .then((data) => {
         setPatient(data)
       })
-  }, [])
+  }, [patientId])
 
   if (!patient) {
     return (

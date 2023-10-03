@@ -9,12 +9,11 @@ import {
   Submit,
   FieldError,
 } from '@redwoodjs/forms'
-import { navigate, routes } from '@redwoodjs/router'
 import { toast, Toaster } from '@redwoodjs/web/toast'
 
 import { useAuth } from 'src/auth'
 const SignUp = () => {
-  const { isAuthenticated, signUp } = useAuth()
+  const { signUp } = useAuth()
 
   const usernameRef = useRef<HTMLInputElement>(null)
   useEffect(() => {
@@ -22,7 +21,6 @@ const SignUp = () => {
   }, [])
 
   const onSubmit = async (data: Record<string, string>) => {
-    console.log(JSON.stringify(data, null, 2))
     const response = await signUp({
       username: data.email,
       password: data.password,

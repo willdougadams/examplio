@@ -11,7 +11,8 @@ const PatientEmergencyContactCard = ({
 }: PatientEmergencyContactCardProps) => {
   return (
     <Card>
-      <h2>{'PatientEmergencyContactCard'}</h2>
+      <h2>PatientEmergencyContactCard</h2>
+      <h4>{JSON.stringify(patient)}</h4>
     </Card>
   )
 }
