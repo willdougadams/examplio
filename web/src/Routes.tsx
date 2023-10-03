@@ -27,7 +27,13 @@ const Routes = () => {
         </Private>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/contact" page={ContactPage} name="contact" />
-        <Route path="/patient" page={PatientPage} name="patient" />
+        {/*
+          Patient stuff was for an interview, could be removed, keeping for posterity
+        */}
+        {/* <Route path="/patient" page={PatientPage} name="patient" />
+
+        */}
+        {/* <Route path="/patient" page={PatientPage} name="patient" /> */}
         <Route notfound page={NotFoundPage} />
       </Set>
     </Router>
