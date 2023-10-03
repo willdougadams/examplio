@@ -32,6 +32,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ front, back }) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: '16px',
   }
 
   const frontStyles: CSSProperties = {
