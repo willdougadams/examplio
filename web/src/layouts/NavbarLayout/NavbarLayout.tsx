@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Home } from '@mui/icons-material'
 import CampaignIcon from '@mui/icons-material/Campaign'
+import WidgetsIcon from '@mui/icons-material/Widgets'
 import { Drawer, Box, Divider, CssBaseline, List } from '@mui/material'
 
 import { routes } from '@redwoodjs/router'
@@ -36,18 +37,15 @@ const NavbarLayout = ({ children }: NavbarLayoutProps) => {
         <List>
           <NavButton to={routes.home()} icon={<Home />} label="Home" />
           <NavButton
+            to={routes.widgets({ id: 1 })}
+            icon={<WidgetsIcon />}
+            label="Widgets"
+          />
+          <NavButton
             to={routes.contact()}
             icon={<CampaignIcon />}
             label="Contact"
           />
-          {/*
-          Patient stuff was for an interview, could be removed, keeping for posterity
-          */}
-          {/* <NavButton
-            to={routes.patient()}
-            icon={<MonitorHeartIcon />}
-            label="Patient"
-          /> */}
         </List>
       </Drawer>
       <Box
