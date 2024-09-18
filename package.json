@@ -7,10 +7,10 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/auth-dbauth-setup": "6.3.1",
-    "@redwoodjs/cli-data-migrate": "6.3.1",
-    "@redwoodjs/cli-storybook": "6.3.1",
-    "@redwoodjs/core": "6.3.1"
+    "@redwoodjs/auth-dbauth-setup": "8.2.0",
+    "@redwoodjs/cli-data-migrate": "8.2.0",
+    "@redwoodjs/cli-storybook": "8.2.0",
+    "@redwoodjs/core": "8.2.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
