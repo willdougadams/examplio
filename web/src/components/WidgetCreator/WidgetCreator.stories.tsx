@@ -1,6 +1,6 @@
 // Pass props to your component by passing an `args` object to your story
 //
-// ```jsx
+// ```tsx
 // export const Primary: Story = {
 //  args: {
 //    propName: propValue
@@ -12,14 +12,14 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import WidgetPicker from './WidgetPicker'
+import WidgetCreator from './WidgetCreator'
 
-const meta: Meta<typeof WidgetPicker> = {
-  component: WidgetPicker,
+const meta: Meta<typeof WidgetCreator> = {
+  component: WidgetCreator,
 }
 
 export default meta
 
-type Story = StoryObj<typeof WidgetPicker>
+type Story = StoryObj<typeof WidgetCreator>
 
 export const Primary: Story = {}

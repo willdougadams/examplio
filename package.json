@@ -6,10 +6,15 @@
       "web"
     ]
   },
+  "scripts": {
+    "lint": "yarn rw lint",
+    "format": "yarn rw format",
+    "dev": "yarn rw dev"
+  },
   "devDependencies": {
     "@redwoodjs/auth-dbauth-setup": "8.2.0",
     "@redwoodjs/cli-data-migrate": "8.2.0",
-    "@redwoodjs/cli-storybook": "8.2.0",
+    "@redwoodjs/cli-storybook": "^7.7.4",
     "@redwoodjs/core": "8.2.0"
   },
   "eslintConfig": {

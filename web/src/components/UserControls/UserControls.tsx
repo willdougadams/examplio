@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, MouseEvent } from 'react'
 
 import { Logout, Person, Settings } from '@mui/icons-material'
 import {
@@ -23,7 +23,7 @@ const UserControls = () => {
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
-  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (event: MouseEvent<HTMLDivElement>) => {
     setAnchorEl(event.currentTarget)
   }
   const handleClose = () => {

@@ -1,7 +1,7 @@
 import { render } from '@redwoodjs/testing/web'
 
-import { Loading, Empty, Failure, Success } from './WidgetsCell'
-import { standard } from './WidgetsCell.mock'
+import { standard } from './WidgetAttributeCell.mock'
+import { Loading, Empty, Failure, Success } from './WidgetAttributesCell'
 
 // Generated boilerplate tests do not account for all circumstances
 // and can fail without adjustments, e.g. Float and DateTime types.
@@ -9,7 +9,7 @@ import { standard } from './WidgetsCell.mock'
 //        https://redwoodjs.com/docs/testing#testing-cells
 // https://redwoodjs.com/docs/testing#jest-expect-type-considerations
 
-describe('WidgetsCell', () => {
+describe('WidgetAttributeCell', () => {
   it('renders Loading successfully', () => {
     expect(() => {
       render(<Loading />)
@@ -36,7 +36,7 @@ describe('WidgetsCell', () => {
 
   it('renders Success successfully', async () => {
     expect(() => {
-      render(<Success widgets={standard().widgets} />)
+      render(<Success widgetAttribute={standard().widgetAttribute} />)
     }).not.toThrow()
   })
 })

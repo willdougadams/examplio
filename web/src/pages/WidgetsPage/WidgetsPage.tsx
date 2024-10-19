@@ -1,8 +1,9 @@
-import { Box } from '@mui/material'
+import { Stack } from '@mui/material'
 
 import { MetaTags } from '@redwoodjs/web'
+import { Toaster } from '@redwoodjs/web/toast'
 
-import WidgetPicker from 'src/components/WidgetPicker/WidgetPicker'
+import WidgetCreator from 'src/components/WidgetCreator/WidgetCreator'
 import WidgetsCell from 'src/components/WidgetsCell'
 
 const WidgetsPage = () => {
@@ -10,6 +11,7 @@ const WidgetsPage = () => {
     selectedWidgetId: null,
     setSelectedWidgetId: () => {},
   })
+
   return (
     <WidgetsPageContext.Provider
       value={{
@@ -19,9 +21,11 @@ const WidgetsPage = () => {
     >
       <MetaTags title="Widgets" description="Widgets page" />
 
-      <Box padding="64px">
+      <Stack width="25rem">
+        <WidgetCreator />
         <WidgetsCell />
-      </Box>
+      </Stack>
+      <Toaster />
     </WidgetsPageContext.Provider>
   )
 }
