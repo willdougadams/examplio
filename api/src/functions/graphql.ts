@@ -7,7 +7,7 @@ import services from 'src/services/**/*.{js,ts}'
 
 import { getCurrentUser } from 'src/lib/auth'
 import { db } from 'src/lib/db'
-import generateGraphiQLHeader from 'src/lib/generateGraphiQLHeader'
+import { generateGraphiQLHeader } from 'src/lib/generateGraphiQLHeader'
 import { logger } from 'src/lib/logger'
 
 export const handler = createGraphQLHandler({
