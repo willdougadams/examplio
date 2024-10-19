@@ -10,7 +10,7 @@ import {
   type CellFailureProps,
   useMutation,
 } from '@redwoodjs/web'
-import { toast } from '@redwoodjs/web/dist/toast'
+import { toast } from '@redwoodjs/web/toast'
 
 import {
   UpdateWidgetAttributeInput,

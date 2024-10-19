@@ -12,10 +12,10 @@
     "dev": "yarn rw dev"
   },
   "devDependencies": {
-    "@redwoodjs/auth-dbauth-setup": "8.2.0",
-    "@redwoodjs/cli-data-migrate": "8.2.0",
-    "@redwoodjs/cli-storybook": "^7.7.4",
-    "@redwoodjs/core": "8.2.0"
+    "@redwoodjs/auth-dbauth-setup": "8.4.0",
+    "@redwoodjs/cli-data-migrate": "8.4.0",
+    "@redwoodjs/cli-storybook": "8.4.0",
+    "@redwoodjs/core": "8.4.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
