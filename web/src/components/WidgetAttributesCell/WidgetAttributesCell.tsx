@@ -26,9 +26,7 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 
-export const Success = ({
-  widget,
-}: CellSuccessProps<FindWidgetAttributesQuery>) => {
+export const Success = ({ widget }: CellSuccessProps<FindWidgetAttributesQuery>) => {
   return (
     <ul>
       {(widget.widgetAttributes ?? []).map((item) => {

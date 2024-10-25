@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { standard } from './WidgetAttributeCell.mock'
-import { Loading, Empty, Failure, Success } from './WidgetAttributesCell'
+import { Loading, Empty, Failure, Success } from './WidgetAttributeCell'
 
 const meta: Meta = {
   title: 'Cells/WidgetAttributeCell',

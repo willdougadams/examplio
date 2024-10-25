@@ -87,12 +87,11 @@ export const Success = ({
         disabled={loading}
         defaultValue={widgetAttribute.type}
         onChange={(event) => {
-          console.log('event.target.value', event.target.value)
           update({
             variables: {
               id: widgetAttribute.id,
               input: {
-                value: event.target.value,
+                type: event.target.value as WidgetAttributeTypes
               },
             },
           })

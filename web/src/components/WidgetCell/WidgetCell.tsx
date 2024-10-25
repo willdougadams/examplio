@@ -21,6 +21,7 @@ import {
 import { toast } from '@redwoodjs/web/toast'
 
 import WidgetAttributesCell from 'src/components/WidgetAttributesCell'
+import WidgetRenderer from '../WidgetRenderer/WidgetRenderer'
 
 export const QUERY = gql`
   query FindWidgetQuery($id: Int!) {
@@ -30,6 +31,8 @@ export const QUERY = gql`
       ownerId
       widgetAttributes {
         id
+        type
+        value
       }
     }
   }
@@ -95,6 +98,7 @@ export const Success = ({
               Add Attribute
             </Button>
             <WidgetAttributesCell id={widget.id} />
+            <WidgetRenderer widget={widget} />
           </Stack>
         </AccordionDetails>
       </Accordion>
