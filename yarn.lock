@@ -1736,6 +1736,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ctrl/tinycolor@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@ctrl/tinycolor@npm:4.1.0"
+  checksum: 813dd960366df057006a1b93d7403ec7a48db1e79bec846d38fab15a1e0f37efd3ab96b0c780a14867ddc1f4c5a473e403c5c88e96d212c544ad934411e5307f
+  languageName: node
+  linkType: hard
+
 "@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -17048,6 +17055,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mui-color-input@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "mui-color-input@npm:4.0.2"
+  dependencies:
+    "@ctrl/tinycolor": ^4.1.0
+  peerDependencies:
+    "@emotion/react": ^11.5.0
+    "@emotion/styled": ^11.3.0
+    "@mui/material": ^5.0.0 || ^6.0.0
+    "@types/react": ^18.0.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 8f8ad0c5a0ca4695a71fb3f806ca1e97c539f51444833ea7cae3d188745aa46b46f24ed1bb7e013cd7ca8cdf3d28ea73f764afe0a9a3e840eb2b0f338f6157a2
+  languageName: node
+  linkType: hard
+
 "mute-stream@npm:0.0.8":
   version: 0.0.8
   resolution: "mute-stream@npm:0.0.8"
@@ -19441,6 +19467,7 @@ __metadata:
     "@redwoodjs/cli-storybook-vite": 8.4.0
     "@redwoodjs/core": 8.4.0
     "@storybook/react": ^7.4.1
+    mui-color-input: ^4.0.2
   languageName: unknown
   linkType: soft
 

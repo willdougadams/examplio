@@ -1,4 +1,4 @@
-import { MenuItem, Select } from '@mui/material'
+import { LinearProgress, MenuItem, Select, Stack } from '@mui/material'
 import type {
   FindWidgetAttributeQuery,
   FindWidgetAttributeQueryVariables,
@@ -16,6 +16,7 @@ import {
   UpdateWidgetAttributeInput,
   UpdateWidgetAttributeMutationVariables,
 } from '../../../types/graphql'
+import { WidgetAttributeValueController } from './WidgetAttributeValueController'
 
 export const QUERY = gql`
   query FindWidgetAttributeQuery($id: Int!) {
@@ -39,7 +40,7 @@ export const UPDATE_WIDGET_ATTRIBUTE = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LinearProgress />
 
 export const Empty = () => <div>Empty</div>
 
@@ -67,7 +68,7 @@ export const Success = ({
         `Oops, there was a problem with your submission: ${error.message}`
       )
     },
-    refetchQueries: [{ query: QUERY, variables: { id: widgetAttribute.id } }],
+    refetchQueries: [{ query: QUERY, variables: { id: widgetAttribute.id, value: '' } }],
     awaitRefetchQueries: true,
   })
 
@@ -82,7 +83,7 @@ export const Success = ({
   ] as WidgetAttributeTypes[]
 
   return (
-    <>
+    <Stack direction={'row'} spacing={5}>
       <Select
         disabled={loading}
         defaultValue={widgetAttribute.type}
@@ -109,6 +110,7 @@ export const Success = ({
           )
         })}
       </Select>
-    </>
+      <WidgetAttributeValueController widgetAttribute={widgetAttribute} />
+    </Stack>
   )
 }

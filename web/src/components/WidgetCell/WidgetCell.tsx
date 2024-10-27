@@ -93,11 +93,13 @@ export const Success = ({
           <ListItemText primary={widget.name} />
         </AccordionSummary>
         <AccordionDetails>
-          <Stack spacing={1}>
-            <Button onClick={handleAdd} disabled={loading}>
-              Add Attribute
-            </Button>
-            <WidgetAttributesCell id={widget.id} />
+          <Stack direction={'row'} alignItems={'center'} spacing={15} margin={15}>
+            <Stack spacing={1}>
+              <Button onClick={handleAdd} disabled={loading}>
+                Add Attribute
+              </Button>
+              <WidgetAttributesCell id={widget.id} />
+            </Stack>
             <WidgetRenderer widget={widget} />
           </Stack>
         </AccordionDetails>

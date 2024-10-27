@@ -3,6 +3,7 @@ import type { FindWidgetAttributesQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import WidgetAttributeCell from '../WidgetAttributeCell'
+import { Stack } from '@mui/material'
 
 export const QUERY = gql`
   query FindWidgetAttributesQuery($id: Int!) {
@@ -28,10 +29,10 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({ widget }: CellSuccessProps<FindWidgetAttributesQuery>) => {
   return (
-    <ul>
+    <Stack>
       {(widget.widgetAttributes ?? []).map((item) => {
         return <WidgetAttributeCell key={item.id} id={item.id} />
       })}
-    </ul>
+    </Stack>
   )
 }
