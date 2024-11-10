@@ -47,6 +47,26 @@ enum WidgetAttributeTypes {
   TEMPERMENT
 }
 
+enum WidgetSmellOptions {
+  FRAGRANT
+  ODIOUS
+  AROMATIC
+  PUNGENT
+  LIGHTLY_SCENTED
+  MUSKY
+  ACRID
+  MALODOROUS
+}
+
+enum WidgetTempermentOptions {
+  LANGUID
+  MELANCHOLY
+  LIVELY
+  MELLOW
+  JOYFUL
+  RAPTUROUS
+}
+
 model WidgetAttribute {
   id        Int                  @id @default(autoincrement())
   widgetId  Int
@@ -56,4 +76,11 @@ model WidgetAttribute {
   type      WidgetAttributeTypes
   createdAt DateTime             @default(now())
   updatedAt DateTime             @default(now()) @updatedAt
+}
+
+// Include enums not explicitly used elsewhere in the schema
+model ExportMe {
+  id         Int                     @id @default(autoincrement())
+  smell      WidgetSmellOptions
+  temperment WidgetTempermentOptions
 }

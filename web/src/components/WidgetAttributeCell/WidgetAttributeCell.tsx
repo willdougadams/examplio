@@ -1,4 +1,4 @@
-import { LinearProgress, MenuItem, Select, Stack } from '@mui/material'
+import { LinearProgress, MenuItem, Select, Stack, TextField } from '@mui/material';
 import type {
   FindWidgetAttributeQuery,
   FindWidgetAttributeQueryVariables,
@@ -17,6 +17,7 @@ import {
   UpdateWidgetAttributeMutationVariables,
 } from '../../../types/graphql'
 import { WidgetAttributeValueController } from './WidgetAttributeValueController'
+import { defaultAttributeTypeValues } from '../WidgetCell';
 
 export const QUERY = gql`
   query FindWidgetAttributeQuery($id: Int!) {
@@ -84,7 +85,9 @@ export const Success = ({
 
   return (
     <Stack direction={'row'} spacing={5}>
-      <Select
+      <TextField
+        select
+        size='small'
         disabled={loading}
         defaultValue={widgetAttribute.type}
         onChange={(event) => {
@@ -92,7 +95,8 @@ export const Success = ({
             variables: {
               id: widgetAttribute.id,
               input: {
-                type: event.target.value as WidgetAttributeTypes
+                type: event.target.value as WidgetAttributeTypes,
+                value: defaultAttributeTypeValues(event.target.value as WidgetAttributeTypes),
               },
             },
           })
@@ -109,7 +113,7 @@ export const Success = ({
             </MenuItem>
           )
         })}
-      </Select>
+      </TextField>
       <WidgetAttributeValueController widgetAttribute={widgetAttribute} />
     </Stack>
   )

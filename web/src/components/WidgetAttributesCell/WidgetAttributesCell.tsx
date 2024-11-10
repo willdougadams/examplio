@@ -29,7 +29,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({ widget }: CellSuccessProps<FindWidgetAttributesQuery>) => {
   return (
-    <Stack>
+    <Stack spacing={2}>
       {(widget.widgetAttributes ?? []).map((item) => {
         return <WidgetAttributeCell key={item.id} id={item.id} />
       })}
